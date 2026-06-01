@@ -1,0 +1,22 @@
+services:
+  apache-age:
+    image: apache/age:dev_snapshot_master
+    container_name: apache_age_container
+
+    ports:
+      - "5432:5432"
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: graph_db
+
+    volumes:
+      # IMPORTANT : nouveau chemin PostgreSQL 18+
+      - age_data:/var/lib/postgresql
+
+      # init SQL
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  age_data:
