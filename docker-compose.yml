@@ -12,7 +12,6 @@ services:
       POSTGRES_DB: graph_db
 
     volumes:
-      # IMPORTANT : nouveau chemin PostgreSQL 18+
       - age_data:/var/lib/postgresql
 
       # init SQL
