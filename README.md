@@ -37,7 +37,7 @@ docker exec -it apache_age_container psql -U postgres -d graph_db
 ```
 
 ### Loading the Graph Extension
-As soon as the interactive database prompt (graph_db=#) appears, execute the following SQL statement block to explicitly load the Apache AGE extension and dynamically configure the required search path:
+As soon as the interactive database prompt (`graph_db=#`) appears, execute the following SQL statement block to explicitly load the Apache AGE extension and dynamically configure the required search path:
 
 ```SQL
 LOAD 'age';
