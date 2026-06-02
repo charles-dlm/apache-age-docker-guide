@@ -9,7 +9,7 @@ SET search_path = ag_catalog, "$user", public;
 SELECT create_graph('reseau_social');
 
 -- 4. Insérer des données de test (Syntaxe Cypher)
-SELECT * FROM cypher('social_network', $$
+SELECT * FROM cypher('reseau_social', $$
     CREATE (a:Person {name: 'Alice', age: 30})
     CREATE (b:Person {name: 'Bob', age: 25})
     CREATE (a)-[r:KNOWS {since: 2021}]->(b)
