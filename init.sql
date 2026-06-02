@@ -6,7 +6,7 @@ LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 
 -- 3. Créer un graphe nommé "reseau_social"
-SELECT create_graph('reseau_social');
+SELECT create_graph('social_media');
 
 -- 4. Insérer des données de test (Syntaxe Cypher)
 SELECT * FROM cypher('reseau_social', $$
